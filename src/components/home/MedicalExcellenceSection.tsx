@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   Building2,
   ChevronRight,
+  ChevronDown,
   Activity,
   Brain,
   Eye,
@@ -21,6 +24,8 @@ interface Department {
 }
 
 export default function MedicalExcellenceSection() {
+  const [showAll, setShowAll] = useState(false);
+
   const departments: Department[] = [
     {
       id: 1,
@@ -432,6 +437,11 @@ export default function MedicalExcellenceSection() {
     },
   ];
 
+  const INITIAL_COUNT = 8;
+  const visibleDepartments = showAll
+    ? departments
+    : departments.slice(0, INITIAL_COUNT);
+
   return (
     <section id="treatments" className="w-full bg-white py-14 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -467,7 +477,7 @@ export default function MedicalExcellenceSection() {
 
         {/* 4-Columns Department Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-          {departments.map((dept) => (
+          {visibleDepartments.map((dept) => (
             <div
               key={dept.id}
               className="bg-[#FAFCFD] border border-[#E7EDF3] rounded-[20px] p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 hover:shadow-card hover:border-[#D5E1ED] hover:bg-white group"
@@ -508,7 +518,27 @@ export default function MedicalExcellenceSection() {
             </div>
           ))}
         </div>
+
+        {/* View All / Show Less Services Toggle */}
+        <div className="mt-10 sm:mt-12 flex items-center justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll((prev) => !prev)}
+            className="group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-navy hover:bg-navy-light text-white text-sm sm:text-[15px] font-semibold transition-all duration-300 shadow-[0_4px_16px_rgba(11,35,69,0.18)] hover:shadow-[0_8px_25px_rgba(0,131,141,0.25)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+          >
+            <span>
+              {showAll ? "Show Core Services Only" : `View All Services (${departments.length})`}
+            </span>
+            <ChevronDown
+              className={`w-4 h-4 text-[#19B6B0] transition-transform duration-300 ${
+                showAll ? "rotate-180" : "group-hover:translate-y-0.5"
+              }`}
+            />
+          </button>
+        </div>
+
       </div>
     </section>
   );
 }
+
