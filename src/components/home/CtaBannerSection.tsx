@@ -16,7 +16,7 @@ export default function CtaBannerSection() {
             </div>
 
             {/* Heading */}
-            <h2 className="text-[20px] sm:text-3xl lg:text-[34px] font-medium text-white tracking-tight leading-snug sm:leading-tight">
+            <h2 className="text-[20px] sm:text-[28px] font-bold text-white tracking-tight leading-snug sm:leading-[1.25]">
               Need an Urgent Second Opinion?
             </h2>
 

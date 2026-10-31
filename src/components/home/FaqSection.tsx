@@ -76,7 +76,7 @@ export default function FaqSection() {
           <p className="text-[11.5px] sm:text-xs font-bold text-teal-primary tracking-widest uppercase mb-2">
             EVERYTHING YOU NEED TO KNOW
           </p>
-          <h2 className="text-[20px] sm:text-3xl lg:text-[36px] font-medium text-navy tracking-tight leading-snug sm:leading-tight">
+          <h2 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25]">
             Helpful Answers &ndash; FAQ&apos;s About Medical Tourism
           </h2>
           <p className="mt-2.5 sm:mt-3 text-[14px] sm:text-base text-slate-body leading-relaxed">

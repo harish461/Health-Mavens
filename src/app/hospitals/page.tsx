@@ -314,7 +314,7 @@ function HospitalsDirectoryContent() {
             <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#FDF8EB] text-[#A16207] border border-[#F3E2B8] mb-4 shadow-2xs">
               HOSPITAL SELECTION STANDARDS
             </div>
-            <h2 className="text-[20px] sm:text-3xl lg:text-[38px] font-medium text-navy tracking-tight leading-snug sm:leading-tight mb-3">
+            <h2 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25] mb-3">
               How We Benchmark Top Hospitals in India
             </h2>
             <p className="text-[14px] sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">

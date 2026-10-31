@@ -47,7 +47,7 @@ export default function DoctorAdvisorySection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-[20px] sm:text-3xl lg:text-[38px] font-medium text-navy tracking-tight leading-snug sm:leading-tight mb-3">
+          <h2 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25] mb-3">
             How to Choose the Best Doctor for Your Treatment in India
           </h2>
 

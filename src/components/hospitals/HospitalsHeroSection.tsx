@@ -80,7 +80,7 @@ export default function HospitalsHeroSection({
         </div>
 
         {/* Main Title matching screenshot */}
-        <h1 className="text-[20px] sm:text-4xl lg:text-[44px] font-medium text-navy tracking-tight leading-snug sm:leading-[1.15] mb-3">
+        <h1 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25] mb-3">
           Best {specialty} Hospitals in India
         </h1>
 

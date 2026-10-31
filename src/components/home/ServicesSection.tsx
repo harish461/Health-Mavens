@@ -90,7 +90,7 @@ export default function ServicesSection() {
           <p className="text-[11.5px] sm:text-xs font-bold text-teal-primary tracking-widest uppercase mb-2 sm:mb-3">
             ZERO FACILITATION FEE &bull; 100% PATIENT ADVOCACY
           </p>
-          <h2 className="text-[20px] sm:text-3xl lg:text-[38px] font-medium text-navy tracking-tight leading-snug sm:leading-tight">
+          <h2 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25]">
             Comprehensive Care &ndash; Our Services
           </h2>
           <p className="mt-3.5 sm:mt-4 text-[14px] sm:text-base text-slate-body leading-relaxed max-w-2xl mx-auto">

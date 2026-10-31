@@ -173,7 +173,7 @@ export default function ConsultationForm() {
 
       {/* Form Heading */}
       <div className="mb-6">
-        <h2 className="text-[20px] sm:text-[26px] font-medium text-navy tracking-tight leading-snug sm:leading-tight">
+        <h2 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25]">
           Let Us Help You
         </h2>
         <p className="text-[14px] sm:text-[13.5px] text-slate-muted mt-1 leading-snug">

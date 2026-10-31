@@ -74,7 +74,7 @@ export default function HeroSection() {
             <TrustBadge />
 
             {/* Main Headline */}
-            <h1 className="text-[22px] sm:text-4xl md:text-5xl lg:text-[48px] font-semibold text-navy leading-snug sm:leading-[1.12] tracking-tight">
+            <h1 className="text-[20px] sm:text-[28px] font-bold text-navy leading-snug sm:leading-[1.25] tracking-tight">
               Leading Healthcare <br />
               <span className="relative inline-block text-teal-primary mt-1">
                 Consultant in India

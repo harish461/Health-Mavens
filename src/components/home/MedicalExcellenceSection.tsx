@@ -455,7 +455,7 @@ export default function MedicalExcellenceSection() {
             </div>
 
             {/* Main Section Title */}
-            <h2 className="text-[20px] sm:text-3xl lg:text-[36px] font-medium text-navy tracking-tight leading-snug sm:leading-tight">
+            <h2 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25]">
               Medical Excellence &ndash; Specialized Healthcare Facilities &amp; Professionals
             </h2>
 

@@ -11,21 +11,21 @@ import {
 
 export default function MainFooter() {
   const quickLinks = [
-    { label: "Find Best Doctors", href: "#quote-form" },
-    { label: "Find Best Hospitals", href: "#quote-form" },
-    { label: "Ayurveda Treatments", href: "#quote-form" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Find Best Doctors", href: "/doctors" },
+    { label: "Find Best Hospitals", href: "/hospitals" },
+    { label: "Ayurveda Treatments", href: "/ayurveda" },
+    { label: "Testimonials", href: "/testimonials" },
     { label: "Book Appointment", href: "#quote-form" },
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
   ];
 
   const aboutLinks = [
-    { label: "Who Are We", href: "#about" },
-    { label: "Vision", href: "#about" },
-    { label: "Mission", href: "#about" },
-    { label: "Our Team", href: "#about" },
-    { label: "Our Offices", href: "#about" },
-    { label: "Gallery", href: "#about" },
+    { label: "Who Are We", href: "/about-us#story" },
+    { label: "Vision", href: "/about-us#vision" },
+    { label: "Mission", href: "/about-us#mission" },
+    { label: "Our Standards", href: "/about-us#standards" },
+    { label: "Our Network", href: "/about-us#network" },
+    { label: "Patient Journey", href: "/about-us#journey" },
   ];
 
   return (

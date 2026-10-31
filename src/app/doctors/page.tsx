@@ -227,7 +227,7 @@ function DoctorsDirectoryContent() {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-[20px] sm:text-3xl lg:text-[42px] font-medium text-navy tracking-tight leading-snug sm:leading-tight mb-4">
+          <h1 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25] mb-4">
             Best {selectedSpecialty} Doctors in India
           </h1>
 

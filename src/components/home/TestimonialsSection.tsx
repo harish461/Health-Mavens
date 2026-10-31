@@ -160,7 +160,7 @@ export default function TestimonialsSection() {
               <ShieldCheck className="w-4 h-4 text-teal-primary" />
               <span>PROVEN PATIENT OUTCOMES</span>
             </div>
-            <h2 className="text-[20px] sm:text-3xl lg:text-[36px] font-medium text-navy tracking-tight leading-snug sm:leading-tight">
+            <h2 className="text-[20px] sm:text-[28px] font-bold text-navy tracking-tight leading-snug sm:leading-[1.25]">
               Real Experiences &ndash; Patient Testimonials
             </h2>
             <p className="mt-2.5 sm:mt-3 text-[14px] sm:text-base text-slate-body max-w-2xl">

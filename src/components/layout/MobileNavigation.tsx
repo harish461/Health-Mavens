@@ -11,13 +11,17 @@ import {
   Clock,
   Globe,
   ChevronDown,
+  ChevronUp,
+  ChevronRight,
   Check,
 } from "lucide-react";
+import { specialtiesMenuData } from "./specialtiesData";
 
 interface NavItem {
   label: string;
   href: string;
   active?: boolean;
+  isDropdown?: boolean;
 }
 
 interface MobileNavigationProps {
@@ -41,6 +45,7 @@ export default function MobileNavigation({
 }: MobileNavigationProps) {
   const [selectedLang, setSelectedLang] = useState("English");
   const [langOpen, setLangOpen] = useState(false);
+  const [treatmentsExpanded, setTreatmentsExpanded] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -155,20 +160,61 @@ export default function MobileNavigation({
 
           {/* Navigation links */}
           <div className="space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={onClose}
-                className={`block px-4 py-2.5 rounded-xl text-[15px] font-medium transition-all ${
-                  item.active
-                    ? "bg-teal-soft text-teal-primary font-semibold border-l-4 border-teal-primary"
-                    : "text-slate-body hover:bg-slate-50 hover:text-navy"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (item.isDropdown) {
+                return (
+                  <div key={item.label} className="space-y-1">
+                    <button
+                      type="button"
+                      onClick={() => setTreatmentsExpanded(!treatmentsExpanded)}
+                      className={`w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-[15px] font-medium transition-all ${
+                        treatmentsExpanded || item.active
+                          ? "bg-teal-soft text-teal-primary font-semibold"
+                          : "text-slate-body hover:bg-slate-50 hover:text-navy"
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      {treatmentsExpanded ? (
+                        <ChevronUp className="w-4 h-4" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </button>
+
+                    {treatmentsExpanded && (
+                      <div className="pl-3 pr-1 py-1 space-y-0.5 max-h-56 overflow-y-auto">
+                        {specialtiesMenuData.map((spec) => (
+                          <Link
+                            key={spec.id}
+                            href={`/doctors?specialty=${encodeURIComponent(spec.name)}`}
+                            onClick={onClose}
+                            className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold text-slate-700 hover:text-teal-primary hover:bg-slate-50"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#59C7B6]" />
+                            <span>{spec.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={onClose}
+                  className={`block px-4 py-2.5 rounded-xl text-[15px] font-medium transition-all ${
+                    item.active
+                      ? "bg-teal-soft text-teal-primary font-semibold border-l-4 border-teal-primary"
+                      : "text-slate-body hover:bg-slate-50 hover:text-navy"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Direct Actions in Drawer */}
